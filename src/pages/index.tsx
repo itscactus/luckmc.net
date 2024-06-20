@@ -7,10 +7,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-const mcs = require('node-mcstatus');
-
-const host = 'mc.hypixel.net';
-const port = 25565;
+const apiEndpoint = 'https://api.mcstatus.io/v2/status/java/mc.hypixel.net';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -19,8 +16,9 @@ function HomepageHeader() {
   useEffect(() => {
     async function fetchPlayerCount() {
       try {
-        const status = await mcs.statusJava(host, port);
-        setPlayerCount(status.players.online);
+        const response = await fetch(apiEndpoint);
+        const data = await response.json();
+        setPlayerCount(data.players.online);
       } catch (error) {
         console.error('Error fetching player count:', error);
       }
