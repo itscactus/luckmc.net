@@ -3,35 +3,70 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background-image: url('/img/header.png');
-  background-size: cover;
-  background-position: center;
+ 
+ .buttons {
+  margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
+.playerCount 
+{
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  margin-top: 1rem;
 }
+
+.blinkingCircle {
+  width: 12px;
+  height: 12px;
+  margin-top : -15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #00ff00;
+  animation: blink 1.2s infinite;
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+.heroBanner {
+ padding-bottom: 2rem; /* Ensure there's space for the player count */
+ padding: 4rem 0;
+ text-align: center;
+ position: relative;
+ overflow: hidden;
+ background-image: url('/img/header.png');
+ background-size: cover;
+ background-position: center;
+}
+
+@media screen and (max-width: 996px) {
+ .heroBanner {
+   padding: 2rem;
+ }
+}
+
+.buttons {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 6px;
+}
+
 .hero__title {
-  color: #00fc22!important;
-  font-weight: bold;
-  font-size: xxx-large;
+ margin: 0;
+ color: #ffffff!important;
+ font-weight: bold;
+ font-size: xxx-large;
 }
 .hero__subtitle {
-  color: #00fc22b7!important;
-  font-size: x-large;
-  font-weight: 500;
+ margin-bottom: 2rem;
+ color: #ffffff!important;
+ font-size: x-large;
+ font-weight: 500;
 }

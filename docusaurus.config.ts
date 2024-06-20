@@ -60,14 +60,13 @@ const config: Config = {
         src: 'img/logo.png',
       },
       items: [
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Başlangıç',
+          label: 'Skyblock Rehberi',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {to: '/docs/kurallar', label: 'Kurallar', position: 'left'},
         {
           href: 'https://github.com/luckmc-net/luckmc.net',
           label: 'GitHub',

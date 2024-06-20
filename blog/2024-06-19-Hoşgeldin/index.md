@@ -1,7 +1,7 @@
 ---
 slug: hosgeldin
 title: Hoşgeldin
-authors: [itscactus]
+authors: [lewislosa]
 tags: [skyblock]
 ---
 
